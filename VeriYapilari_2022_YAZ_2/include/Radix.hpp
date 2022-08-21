@@ -20,6 +20,7 @@ private:
     Queue **queues;
     int maxStep;
 
+    int intPow(int,int);
     int MaxStepNumber();
     int StepCount(int);
 public:
