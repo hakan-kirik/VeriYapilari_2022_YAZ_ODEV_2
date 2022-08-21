@@ -61,7 +61,7 @@ Queue* Radix::Sort() {
             for (; len > 0; len--) {
                 int number = queues[index]->peek();
                 queues[index]->dequeue();
-                int stepValue = (number / (int) pow(10, i)) % 10;
+                int stepValue = (number / intPow(10, i)) % 10;
                 queues[stepValue]->enqueue(number);
 
             }
@@ -78,6 +78,13 @@ Queue* Radix::Sort() {
     }
 
     return ordered;
+}
+Radix::intPow(int val, int pow) {
+
+    if (pow <= 0)
+        return 1;
+    return val * intPow(val, pow - 1);
+
 }
 
 Radix::~Radix() {
