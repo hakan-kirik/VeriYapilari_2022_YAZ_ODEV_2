@@ -79,7 +79,7 @@ Queue* Radix::Sort() {
 
     return ordered;
 }
-Radix::intPow(int val, int pow) {
+int Radix::intPow(int val, int pow) {
 
     if (pow <= 0)
         return 1;
